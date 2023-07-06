@@ -1,1 +1,10 @@
 apiVersion: v1
+externalServicesDeclarations:
+  - name: nginx-clusterip-svc
+    type: ingress
+    ingressBasePath: /
+    enabled: false
+    enabledChartField: ui.enabled
+    label: Access NGINX over Ingress
+    description: Access the application UI over an Ingress
+
