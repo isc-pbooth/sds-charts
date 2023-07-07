@@ -67,10 +67,14 @@ affinity: {}
 
 
 # There are the chart values that I am using to control access to the service
-ui:
-  enabled: "false"
-  hostname: "localhost"
-  port: "10002"
+ingress:
+  albGroupName: ""
+  enabled: false
+  hostname: ""
+  tlsEnabled: true
+  tls:
+    clusterIssuer: sds-selfsigned-cluster-issuer
+
 
 
 # SDS section used for injecting SDS specific values into a chart
@@ -78,4 +82,5 @@ sds:
   ingress:
     albGroupName: ""
     hostname: ""
-    tls: ""
+    tls:
+      clusterIssuer: ""
