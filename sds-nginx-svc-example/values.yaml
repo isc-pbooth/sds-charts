@@ -69,18 +69,8 @@ affinity: {}
 # There are the chart values that I am using to control access to the service
 ingress:
   albGroupName: ""
-  enabled: false
+  enabled: "false"
   hostname: ""
   tlsEnabled: true
   tls:
     clusterIssuer: sds-selfsigned-cluster-issuer
-
-
-
-# SDS section used for injecting SDS specific values into a chart
-sds:
-  ingress:
-    albGroupName: ""
-    hostname: ""
-    tls:
-      clusterIssuer: ""
