@@ -23,9 +23,6 @@ metadata:
   name: nginx-clusterip-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-    {{- if ne .Values.ingress.albGroupName "" }}
-    alb.ingress.kubernetes.io/group.name: {{ .Values.ingress.albGroupName }}
-    {{- end }}
     {{- if ne .Values.ingress.tls.clusterIssuer "" }}
     cert-manager.io/cluster-issuer: {{ .Values.ingress.tls.clusterIssuer }}
     {{- end }}
