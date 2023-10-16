@@ -8,6 +8,7 @@ externalServicesDeclarations:
     enabledChartField: ingress.enabled
     tlsEnabledChartField: ingress.tlsEnabled
     clusterIssuerChartField: ingress.tls.clusterIssuer
+    annotationsChartField: ingress.annotations
     label: Access LTV Demo UI over Ingress
     description: Access the application UI over an Ingress
 
