@@ -27,7 +27,7 @@ metadata:
     cert-manager.io/cluster-issuer: {{ .Values.ingress.tls.clusterIssuer }}
     {{- end }}
     {{- if .Values.ingress.annotations }}
-    {{- fromJson .Values.ingress.annotations | toYaml | nindent 4 }}
+    {{- toYaml .Values.ingress.annotations | nindent 4 }}
     {{- end }}
 spec:
   rules:
