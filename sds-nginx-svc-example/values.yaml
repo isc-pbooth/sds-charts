@@ -69,6 +69,7 @@ affinity: {}
 # There are the chart values that I am using to control access to the service
 ingress:
   annotations: {}
+  ingressClass: nginx
   enabled: "false"
   hostname: ""
   tlsEnabled: true

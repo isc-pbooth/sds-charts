@@ -22,7 +22,7 @@ metadata:
   namespace: {{ .Release.Name }}
   name: nginx-clusterip-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: {{ .Values.ingress.ingressClass }}
     {{- if ne .Values.ingress.tls.clusterIssuer "" }}
     cert-manager.io/cluster-issuer: {{ .Values.ingress.tls.clusterIssuer }}
     {{- end }}

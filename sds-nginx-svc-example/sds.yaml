@@ -4,6 +4,7 @@ externalServicesDeclarations:
     type: ingress
     hostnameChartField: ingress.hostname
     ingressBasePath: /
+    ingressClassChartField: ingress.ingressClass
     enabled: false
     enabledChartField: ingress.enabled
     tlsEnabledChartField: ingress.tlsEnabled
